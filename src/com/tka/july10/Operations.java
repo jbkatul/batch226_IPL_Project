@@ -1,5 +1,8 @@
 package com.tka.july10;
 
+import java.time.LocalDate;
+import java.time.Period;
+
 public class Operations {
 	
 	public void tableof5() {
@@ -12,5 +15,9 @@ public class Operations {
 	}
 	
 	// add your task here
+
+	public static int calculateAge(LocalDate birthDate) {
+	    return Period.between(birthDate, LocalDate.now()).getYears();
+	}
 
 }
