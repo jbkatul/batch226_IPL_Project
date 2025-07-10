@@ -5,8 +5,13 @@ import java.time.Period;
 
 public class Operations {
 	
-	public void tableof5() {
-		// nidhee
+
+
+	public static void tableof5() {
+		System.out.println("Table of 5:");
+		for (int i = 1; i <= 10; i++) {
+			System.out.println("5 * " + i + " = " + (5 * i));
+		}
 	}
 	
 	
