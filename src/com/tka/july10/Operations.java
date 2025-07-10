@@ -6,11 +6,19 @@ public class Operations {
 		// nidhee
 	}
 	
-	
 	public void tableof10() {
 		// prem
 	}
 	
-	// add your task here
-
+	// Method to find max number in an array
+	public int max(int[] a) {
+		
+		int max = a[0];
+		for (int i = 1; i < a.length; i++) {
+			if (a[i] > max) {
+				max = a[i];
+			}
+		}
+		return max;
+	}
 }
