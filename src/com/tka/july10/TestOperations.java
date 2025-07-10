@@ -10,7 +10,7 @@ public class TestOperations {
 		
 		System.out.println("Shubham's age is : " + Operations.calculateAge(LocalDate.of(2002, 5, 2))); 
 
-		
+		Operations.Quiz();// Task Done By Tukaram
 	}
 
 }
