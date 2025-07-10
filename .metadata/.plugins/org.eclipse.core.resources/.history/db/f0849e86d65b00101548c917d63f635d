@@ -1,0 +1,67 @@
+package com.tka.Dao;
+
+import java.util.ArrayList;
+import java.util.List;
+import com.tka.Entity.player;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+
+public class IPLDao {
+
+    String path = "com.mysql.cj.jdbc.Driver";
+    String url = "jdbc:mysql://localhost:3306/advjava226";
+    String username = "root";
+    String password = "root";
+
+    String query = "SELECT * FROM players";
+
+    public List<player> getAllPlayers() {
+        System.out.println("In IPLDao.getAllPlayers() method");
+        List<player> playerList = new ArrayList<>();
+
+        Connection conn = null;
+        PreparedStatement preparedStatement = null;
+        ResultSet resultSet = null;
+
+        try {
+            Class.forName(path);
+            System.out.println("Driver loaded");
+
+            conn = DriverManager.getConnection(url, username, password);
+            System.out.println("Connected to DB");
+
+            preparedStatement = conn.prepareStatement(query);
+            System.out.println("Query prepared");
+
+            resultSet = preparedStatement.executeQuery();
+            System.out.println("Query executed");
+
+            while (resultSet.next()) {
+                int pid = resultSet.getInt(1);
+                int jn = resultSet.getInt(2); 
+                String pname = resultSet.getString(3);
+                int runs = resultSet.getInt(4);
+                int wicket = resultSet.getInt(5);
+                String tname = resultSet.getString(6);
+
+                player p = new player(pid, jn, pname, runs, wicket, tname);
+                playerList.add(p);
+            }
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            try {
+                if (resultSet != null) resultSet.close();
+                if (preparedStatement != null) preparedStatement.close();
+                if (conn != null) conn.close();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+
+        return playerList;
+    }
+}

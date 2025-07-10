@@ -1,0 +1,34 @@
+package com.tka.IPLController;
+
+import java.util.List;
+
+import com.tka.Entity.player;
+import com.tka.Service.IPLService;
+
+public class IPLController {
+	private IPLService iplservice=null;
+	public List<player> getAllPlayers() {
+		System.out.println("In IPLController.getAllPlayers() method");
+		
+		 iplservice=new IPLService();
+		 List<player> allplayer=iplservice.getAllPlayers();
+		 
+		
+		return allplayer;
+	}
+	public int insertplayer(player player) {
+		
+		
+		iplservice = new IPLService();
+		int ack = iplservice.insertPlayer(player);
+		
+		return ack;
+	}
+	public int updatedata(int i, int j) {
+		iplservice = new IPLService();
+		int ack = iplservice.updatePlayer(i,j)
+		return ack;
+	}
+	
+
+}

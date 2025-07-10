@@ -1,0 +1,22 @@
+package com.tka.user;
+
+import java.util.List;
+
+import com.tka.Entity.player;
+import com.tka.IPLController.IPLController;
+
+public class user {
+
+	public static void main(String[] args) {
+
+          System.out.println("welcome to Ipl management system");
+      	  System.out.println("In IPLUser class");
+      	  
+      	  IPLController iplcontroller=new IPLController();
+      	  List<player> allplayer_list=iplcontroller.getAllPlayers();
+      	  
+  		
+
+	}
+
+}

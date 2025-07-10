@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Compiled class files
 *.class
 
@@ -46,3 +47,6 @@ build/
 # Maven
 target/
 /bin/
+=======
+/.metadata/
+>>>>>>> bb37b8d1c6c1d009d01ba143570cbe0e50cd678f
