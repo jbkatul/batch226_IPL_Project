@@ -6,7 +6,8 @@ public class TestOperations {
 
 	public static void main(String[] args) {
 
-//		Test your task here
+		Operations.tableof10(10);
+		//		Test your task here
 		
 		System.out.println("Shubham's age is : " + Operations.calculateAge(LocalDate.of(2002, 5, 2))); 
 
