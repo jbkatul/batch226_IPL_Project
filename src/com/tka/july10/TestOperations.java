@@ -8,9 +8,8 @@ public class TestOperations {
 
 //		Test your task here
 		
-		System.out.println("Shubham's age is : " + Operations.calculateAge(LocalDate.of(2002, 5, 2))); 
-
-		
+	 Operations o = new Operations();
+	 o.table5();
 	}
 
 }

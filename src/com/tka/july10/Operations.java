@@ -15,9 +15,11 @@ public class Operations {
 	}
 	
 	// add your task here
-
-	public static int calculateAge(LocalDate birthDate) {
-	    return Period.between(birthDate, LocalDate.now()).getYears();
+public void table5() {
+	  int num=5;
+	  for(int i=1; i<=10; i++ ) {
+		  System.out.println("table :" +num*i);
+	  }
 	}
 
 }
