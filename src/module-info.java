@@ -4,5 +4,5 @@
 /**
  * 
  */
-module batch226_IPL_Project {
+module ipnew {
 }
