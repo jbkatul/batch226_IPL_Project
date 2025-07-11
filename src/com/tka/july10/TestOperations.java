@@ -12,6 +12,11 @@ public class TestOperations {
 		System.out.println("Shubham's age is : " + Operations.calculateAge(LocalDate.of(2002, 5, 2))); 
 
 		Operations.Quiz();// Task Done By Tukaram
+		// Code my Anushka
+		int number = 5;
+        int fact = Operations.factorial(number);
+        System.out.println("Factorial of " + number + " is: " + fact);
+	
 	}
 
 }
