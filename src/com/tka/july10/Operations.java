@@ -19,6 +19,10 @@ public class Operations {
 	}
 	
 	// add your task here
+	public int add(int a, int b) {
+	    return a + b;
+	}
+	
 
 	public static int calculateAge(LocalDate birthDate) {
 	    return Period.between(birthDate, LocalDate.now()).getYears();
