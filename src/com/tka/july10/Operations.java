@@ -5,38 +5,67 @@ import java.time.Period;
 import java.util.Scanner;
 
 public class Operations {
-	
-	public void tableof5() {
-		// nidhee
-	}
-	
-	
-	public static void tableof10(int no) {
-		System.out.println("Table Of "+no);
-		for(int i=1;i<=10;i++) {
-			System.out.println(no+" x "+i+" = "+(no*i));
-		}
-	}
-	
-	// add your task here
 
-	public static int calculateAge(LocalDate birthDate) {
-	    return Period.between(birthDate, LocalDate.now()).getYears();
-	}
-	public static void Quiz() {
-		
-		Scanner sc = new Scanner(System.in);
+    // From taskbranch123
+    static double num1 = 12;
+    static double num2 = 4;
+    static char operator = '+';
+
+    public static void startCalculator() {
+        double result;
+
+        if (operator == '+') {
+            result = num1 + num2;
+            System.out.println(num1 + " + " + num2 + " = " + result);
+        } else if (operator == '-') {
+            result = num1 - num2;
+            System.out.println(num1 + " - " + num2 + " = " + result);
+        } else if (operator == '*') {
+            result = num1 * num2;
+            System.out.println(num1 + " * " + num2 + " = " + result);
+        } else if (operator == '/') {
+            if (num2 != 0) {
+                result = num1 / num2;
+                System.out.println(num1 + " / " + num2 + " = " + result);
+            } else {
+                System.out.println("Error: Cannot divide by zero.");
+            }
+        } else {
+            System.out.println("Invalid operator!");
+        }
+    }
+
+    // From main branch
+
+    public void tableof5() {
+        System.out.println("Table of 5:");
+        for (int i = 1; i <= 10; i++) {
+            System.out.println("5 x " + i + " = " + (5 * i));
+        }
+    }
+
+    public static void tableof10(int no) {
+        System.out.println("Table Of " + no);
+        for (int i = 1; i <= 10; i++) {
+            System.out.println(no + " x " + i + " = " + (no * i));
+        }
+    }
+
+    public static int calculateAge(LocalDate birthDate) {
+        return Period.between(birthDate, LocalDate.now()).getYears();
+    }
+
+    public static void Quiz() {
+        Scanner sc = new Scanner(System.in);
         int score = 0;
 
         System.out.println("Welcome to the Java Quiz!\n");
 
         System.out.println("Q1: What is the size of int in Java?");
-        
         System.out.println("A. 4 bytes\nB. 2 bytes\nC. 8 bytes\nD. 1 byte");
         System.out.println("Enter Your Option");
         String ans1 = sc.nextLine();
-        if (ans1.equalsIgnoreCase("A")) 
-        	score++;
+        if (ans1.equalsIgnoreCase("A")) score++;
 
         System.out.println("\nQ2: Which keyword is used to create a subclass?");
         System.out.println("A. class\nB. extends\nC. implements\nD. inherits");
@@ -53,6 +82,7 @@ public class Operations {
         System.out.println("\nYour final score: " + score + "/3");
 
         sc.close();
-	}
-
+    }
 }
+
+

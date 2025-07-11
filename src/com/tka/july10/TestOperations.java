@@ -4,14 +4,18 @@ import java.time.LocalDate;
 
 public class TestOperations {
 
-	public static void main(String[] args) {
+    public static void main(String[] args) {
 
-		Operations.tableof10(10);
-		//		Test your task here
-		
-		System.out.println("Shubham's age is : " + Operations.calculateAge(LocalDate.of(2002, 5, 2))); 
+        // From taskbranch123
+        Operations.startCalculator();
 
-		Operations.Quiz();// Task Done By Tukaram
-	}
+        // From main
+        Operations.tableof10(10);
 
+        // Test age calculation
+        System.out.println("Shubham's age is : " + Operations.calculateAge(LocalDate.of(2002, 5, 2)));
+
+        // Run quiz
+        Operations.Quiz(); // Task Done By Tukaram
+    }
 }
