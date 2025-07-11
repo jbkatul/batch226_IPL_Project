@@ -6,6 +6,10 @@ public class TestOperations {
 
 	public static void main(String[] args) {
 
+		
+		 Operations op=new  Operations();
+		
+		 System.out.println( " addition is  :" +op.add(12, 34));
 //		Test your task here
 		
 		System.out.println("Shubham's age is : " + Operations.calculateAge(LocalDate.of(2002, 5, 2))); 
