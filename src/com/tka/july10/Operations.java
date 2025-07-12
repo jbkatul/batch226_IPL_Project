@@ -62,4 +62,25 @@ public class Operations {
          return result;
          }
 
+	public static int countVowels(String str) {
+		int count = 0;
+		String[] words = str.split(" ");
+
+		char[] vowels = { 'a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U' };
+		for (int i = 0; i < words.length; i++) {
+			System.out.println(words[i]);
+			for (int j = 0; j < words[i].length(); j++) {
+				for (int k = 0; k < vowels.length - 1; k++) {
+					if (vowels[k] == words[i].charAt(j)) {
+						System.out.println("vowel : "+vowels[k]);
+						count++;
+					}
+				}
+			}
+		}
+		
+	
+		return count;
+	}
+
 }
