@@ -9,6 +9,9 @@ public class TestOperations {
 		Operations.tableof10(10);
 		//		Test your task here
 		
+		Operations a1 = new Operations();
+		a1.tableof5();
+		
 		System.out.println("Shubham's age is : " + Operations.calculateAge(LocalDate.of(2002, 5, 2))); 
 
 		Operations.Quiz();// Task Done By Tukaram
